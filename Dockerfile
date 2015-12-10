@@ -33,7 +33,7 @@ RUN rm -f /etc/ssh/ssh_host_ecdsa_key /etc/ssh/ssh_host_rsa_key && \
     mkdir -p /root/.ssh && chmod 700 /root/.ssh && \
     touch /root/.ssh/known_hosts && \
     ssh-keyscan -H github.com >> /root/.ssh/known_hosts && \
-    chmod 600 /root/.ssh/id_rsa /root/.ssh/known_hosts && \
+    chmod 600 /root/.ssh/known_hosts && \
     chmod +x /*.sh
 
 RUN /ssh-setup.sh
